@@ -1,7 +1,7 @@
-App = Em.Application.create();
+App = Ember.Application.create();
 
-App.ApplicationController = Em.Controller.extend();
-    App.ApplicationView = Em.View.extend({
+App.ApplicationController = Ember.Controller.extend();
+    App.ApplicationView = Ember.View.extend({
         templateName: 'application'
     });
 
@@ -18,7 +18,7 @@ App.Router = Ember.Router.extend({
     })
 });
 
-App.Company = Em.Object.extend({
+App.Company = Ember.Object.extend({
     markerText: null,
     lat: null,
     lng: null,
@@ -28,7 +28,7 @@ App.Company = Em.Object.extend({
     
 });
 
-App.CompaniesController = Em.ArrayController.extend({
+App.CompaniesController = Ember.ArrayController.extend({
     content: [
         App.Company.create({ markerText: "Bondi Bar", lat: -33.890542, lng: 151.274856, number: 4, iconUrl: "http://www.kjftw.com/sandbox/gmap/images/icons/numeric/red04.png", isOpen: true}),
       App.Company.create({ markerText: "Coogee Beach Grill", lat: -33.923036, lng: 151.259052, number: 5, iconUrl: "http://www.kjftw.com/sandbox/gmap/images/icons/numeric/red05.png", isOpen: false}),
@@ -98,5 +98,4 @@ App.CompaniesView = Ember.View.extend({
         
     }
 });
-App.initialize();
 
